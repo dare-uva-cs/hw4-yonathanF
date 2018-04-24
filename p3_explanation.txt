@@ -1,0 +1,2 @@
+As is expected, when the requirement of the if condition is relaxed, many more inputs
+qualify to pass through into the vulnerable code line. We can see that there are more than 68x more crashes because of this change.  
