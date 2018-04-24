@@ -1,0 +1,16 @@
+Mode Value      Number of Crashes
+---------------------------------
+10               103k                  
+100              7670    
+200              3957    
+500              2178
+1000             1034
+ 
+We can see that the total number of crashes drops significantly as we increase the
+mod_base value. This could be explained by looking at the property of mods. As the
+mod_base value is made smaller and smaller, values being mod'ed by the mod_base will
+map to increasingly fewer values. This means there is higher chance of the return value
+from f being equal to ref_val since ref_val is also related to mod_base.
+ 
+As a result, we see more values pass through the if statement and cause the program to crash.
+ 
