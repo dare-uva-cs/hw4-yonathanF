@@ -1,0 +1,6 @@
+It reads in a file where the filename is specified in argc. Gets buf_len size of content from the file into the char var buf_len. Calls the function f with f as an argument. The function f sums the chars in the str and mods it by mod_base, 1000 in this case. The main method then checks for this result vs ref_val, and if so moves the large str into the smaller str buf. 
+
+The bug is that buf could overflow. This can caused when the value returned from f is == to ref_val, but the length of the str is not smaller than the small buff: 
+
+-> ref_val = 500
+
